@@ -2,11 +2,11 @@
 using System.Net.Http;
 using System.Web.Http;
 
-namespace AutofacWebApi
+namespace SimpleInjectorWebApi
 {
     public class PrognoseController:ApiController
     {
-        private IPrognoseRepository prognoseRepository;
+        private readonly IPrognoseRepository prognoseRepository;
 
         public PrognoseController(IPrognoseRepository prognoseRepository)
         {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace AutofacWebApi
+namespace SimpleInjectorWebApi
 {
     public interface IPrognoseRepository
     {

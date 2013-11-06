@@ -1,4 +1,4 @@
-﻿namespace AutofacWebApi
+﻿namespace SimpleInjectorWebApi
 {
     public class Prognose
     {

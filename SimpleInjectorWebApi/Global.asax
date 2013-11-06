@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="AutofacWebApi.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="SimpleInjectorWebApi.Global" Language="C#" %>

@@ -4,7 +4,7 @@ using System.Web.Http;
 using System.Web.Routing;
 using SimpleInjector;
 
-namespace AutofacWebApi
+namespace SimpleInjectorWebApi
 {
     public class Global : System.Web.HttpApplication
     {
@@ -17,10 +17,7 @@ namespace AutofacWebApi
                 name: "IdWithExt",
                 routeTemplate: "api/{controller}.{ext}");
 
-            routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+            routes.MapHttpRoute("DefaultApi", "api/{controller}/{id}", new { id = RouteParameter.Optional }
             );
         }
 

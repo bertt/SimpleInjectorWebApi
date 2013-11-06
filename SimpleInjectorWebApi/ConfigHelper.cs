@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace AutofacWebApi
+namespace SimpleInjectorWebApi
 {
     public static class ConfigHelper
     {

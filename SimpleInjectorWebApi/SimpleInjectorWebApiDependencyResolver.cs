@@ -4,37 +4,40 @@ using System.Diagnostics;
 using System.Web.Http.Dependencies;
 using SimpleInjector;
 
-public sealed class SimpleInjectorWebApiDependencyResolver:IDependencyResolver
+namespace SimpleInjectorWebApi
 {
-    private readonly Container container;
-
-    public SimpleInjectorWebApiDependencyResolver(
-        Container container)
+    public sealed class SimpleInjectorWebApiDependencyResolver:IDependencyResolver
     {
-        this.container = container;
-    }
+        private readonly Container container;
 
-    [DebuggerStepThrough]
-    public IDependencyScope BeginScope()
-    {
-        return this;
-    }
+        public SimpleInjectorWebApiDependencyResolver(
+            Container container)
+        {
+            this.container = container;
+        }
 
-    [DebuggerStepThrough]
-    public object GetService(Type serviceType)
-    {
-        return ((IServiceProvider)this.container)
-            .GetService(serviceType);
-    }
+        [DebuggerStepThrough]
+        public IDependencyScope BeginScope()
+        {
+            return this;
+        }
 
-    [DebuggerStepThrough]
-    public IEnumerable<object> GetServices(Type serviceType)
-    {
-        return this.container.GetAllInstances(serviceType);
-    }
+        [DebuggerStepThrough]
+        public object GetService(Type serviceType)
+        {
+            return ((IServiceProvider)this.container)
+                .GetService(serviceType);
+        }
 
-    [DebuggerStepThrough]
-    public void Dispose()
-    {
+        [DebuggerStepThrough]
+        public IEnumerable<object> GetServices(Type serviceType)
+        {
+            return this.container.GetAllInstances(serviceType);
+        }
+
+        [DebuggerStepThrough]
+        public void Dispose()
+        {
+        }
     }
 }

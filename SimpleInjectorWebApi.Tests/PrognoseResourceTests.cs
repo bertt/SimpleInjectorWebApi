@@ -2,12 +2,11 @@
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using AutofacWebApi;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using SimpleInjector;
 
-
-namespace SimpleInjector.Tests
+namespace SimpleInjectorWebApi.Tests
 {
     [TestClass]
     public class PrognoseResourceTests
@@ -37,7 +36,7 @@ namespace SimpleInjector.Tests
         }
 
         [TestMethod]
-        public void GetRollenReturnsRollen()
+        public void GetPrognoseReturnsProgonese()
         {
             // arrange
             var client = new HttpClient(_server);
